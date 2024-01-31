@@ -15,9 +15,58 @@ public class ParkingLot {
 
     }
 
-    public String toString() {
+    public int ParkCar(Car x) {
 
-        return "";// Returns a string
+        if (x.handicap) {
+            for (int i = 0; i <= 1; i++) {
+                if (spots[i].parkedCar == null) {
+                    spots[i].parkedCar = x;
+                    return i;
+
+                }
+            }
+        } else {
+            for (int i = 2; i <= 10; i++) {
+                if (spots[i].parkedCar == null) {
+                    spots[i].parkedCar = x;
+                    return i;
+                }
+            }
+        }
+        // for(int i = 0; i <= 10; i++){
+        // if(x.handicap){
+        // if(i <= 1){
+
+        return -1;
+
+    }
+
+    public Car removeCar(int y) {
+        if (spots[y].parkedCar != null) {
+            Car removedCar = spots[y].parkedCar;
+            spots[y].parkedCar = null;
+            return removedCar;
+
+        } else {
+            System.out.println("There is no car in this spot\n");
+            return spots[y].parkedCar;// ???
+
+        }
+    }
+
+    public String toString() {
+        int x = 0;
+        int y = 0;
+        for (int i = 0; i <= 9; i++) {
+            if (spots[i].parkedCar == null) {
+                if (spots[i].handicap == true) {
+                    x = x + 1;
+                } else {
+                    y = y + 1;
+                }
+            }
+        }
+        return "" + x + " " + y;// Returns a string
 
     }
 
