@@ -33,9 +33,7 @@ public class ParkingLot {
                 }
             }
         }
-        // for(int i = 0; i <= 10; i++){
-        // if(x.handicap){
-        // if(i <= 1){
+
 
         return -1;
 
@@ -49,7 +47,7 @@ public class ParkingLot {
 
         } else {
             System.out.println("There is no car in this spot\n");
-            return spots[y].parkedCar;// ???
+            return spots[y].parkedCar;
 
         }
     }
@@ -66,7 +64,7 @@ public class ParkingLot {
                 }
             }
         }
-        return "" + x + " " + y;// Returns a string
+        return "" + x + " " + y;//I think I did this right
 
     }
 

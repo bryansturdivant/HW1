@@ -1,8 +1,8 @@
 public class ParkingSpot {
-    public Car parkedCar;//Car is now a data type 
+    public Car parkedCar; 
     public boolean handicap;
 
-    public ParkingSpot(boolean handicap){ //name it the same as the class 
+    public ParkingSpot(boolean handicap){ 
         this.handicap = handicap;
 
     }
